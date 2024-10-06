@@ -1,0 +1,17 @@
+{
+        "compilerOptions": {
+      "target": "es6",
+      "lib": ["es6", "dom"],
+      "allowJs": true,
+      "checkJs": true,
+      "outDir": "cypress/dist",
+      "rootDir": "cypress",
+      "strict": true,
+      "esModuleInterop": true,
+      "types": [ "cypress" ]  // Add this line
+
+    },
+    "include": ["cypress/**/*.ts"],
+    "exclude": ["node_modules"]
+  }
+  
