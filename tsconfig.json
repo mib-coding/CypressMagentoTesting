@@ -11,7 +11,12 @@
       "types": [ "cypress" ]  // Add this line
 
     },
-    "include": ["cypress/**/*.ts"],
+    "include": 
+    ["cypress/**/*.ts",
+    "cypress/support/commands.d.ts" // Explicitly include the commands declaration file
+    ],
+
     "exclude": ["node_modules"]
+
   }
   

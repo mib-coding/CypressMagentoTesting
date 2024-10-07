@@ -3,7 +3,12 @@ import { defineConfig } from 'cypress'
 export default defineConfig({
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
-    reportDir: 'cypress/reports',
+      reportFilename: "[status]_[datetime]-[name]-report",
+      charts: true,
+      embeddedScreenshots: true,
+      timestamp: "longDate",
+      reportPageTitle: "MC Automated Tests Report",
+      reportDir: 'cypress/reports',
   },
   e2e: {
     // We've imported your old cypress plugins here.
