@@ -15,6 +15,10 @@ class LoginPage {
     submit() {
       cy.xpath('//*[@id="send2"]').click();
     }
+    
+    loginValidation(){
+      cy.url().should('include', '/customer/account')
+    }
   }
   
   export default new LoginPage();
