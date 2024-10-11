@@ -1,6 +1,7 @@
 import { defineConfig } from 'cypress'
 
 export default defineConfig({
+  projectId: '8tthms',
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
       reportFilename: "[status]_[datetime]-[name]-report",

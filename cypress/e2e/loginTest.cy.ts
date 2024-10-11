@@ -1,22 +1,13 @@
 import LoginPage from '../page_objects/loginPage';
+import ProductPage from '../page_objects/productPage';
 //import "cypress-localstorage-commands";
 
-
-// describe('visit login page', () => {
-//   it('should log in with valid credentials', () => {
-//     LoginPage.visit();
-//     LoginPage.fillEmail('masroor.iqbal.buttar@gmail.com'); // Replace with your test email
-//     LoginPage.fillPassword('Mib.109209'); // Replace with your test password
-//     LoginPage.submit();
-
-//     cy.url().should('include', '/customer/account');
-//   });
-// });
+beforeEach(() => {
+  cy.login(); // Call the custom login command to maintain session
+});
 
 describe('Login Tests', () => {
-  beforeEach(() => {
-    cy.login(); // Call the custom login command to maintain session
-  });
+  
   it('should visit the login page', () => {
     LoginPage.visit();
   })
@@ -33,8 +24,24 @@ describe('Login Tests', () => {
   })
   
   it('to verify the login is succeful', ()=>{
-    //cy.reload()
-    cy.url().should('include', '/customer/account');
+    LoginPage.loginValidation();
   });
 });
 
+
+//Tests for Product interaction
+
+describe('Product Interaction', () => {
+  
+  it('visits the Product Page', () => {
+    ProductPage.visit();
+  })
+
+  it('It should add the product to cart', () => {
+  ProductPage.addProductToCart();
+  })
+
+  it('verify if the true product is added', () => {
+  ProductPage.verifyAddedToCart('You added Product Name to your shopping cart.'); // Replace with the correct message
+  }) 
+})
