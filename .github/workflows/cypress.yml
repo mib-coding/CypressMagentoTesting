@@ -27,3 +27,9 @@ jobs:
 
       - name: Generate Mochawesome Report
         run: npx mochawesome-merge ./cypress/reports/*.json > ./cypress/reports/report.json && npx marge ./cypress/reports/report.json --reportDir ./cypress/reports --inline
+        env:
+          # For recording and parallelization to work you must set your CYPRESS_RECORD_KEY
+          # in GitHub repo → Settings → Secrets → Actions
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          # Creating a token https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
