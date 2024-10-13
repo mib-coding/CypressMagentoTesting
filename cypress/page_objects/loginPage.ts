@@ -1,9 +1,5 @@
 // cypress/page_objects/loginPage.ts
 class LoginPage {
-    visit() {
-      cy.visit('/customer/account/login');
-    }
-  
     fillEmail(email: string) {
       cy.xpath('//*[@id="email"]').clear().type(email);
     }

@@ -1,5 +1,6 @@
 import 'cypress-xpath';
 import 'cypress-mochawesome-reporter/register';
+import Cookies from cypress;
 // cypress/support/index.ts
 
 Cypress.Commands.add("login", () => {
@@ -15,3 +16,10 @@ Cypress.Commands.add("login", () => {
     });
   });
   
+  // Set cookie preservation
+Cypress.Cookies.defaults({
+  preserve: (cookie) => {
+    // Example logic: Preserve only specific cookies
+    // Replace the 'your_cookie_name' with actual cookie names you want to preserve
+  return true;  },
+});
