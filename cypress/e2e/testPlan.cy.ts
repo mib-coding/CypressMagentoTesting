@@ -21,6 +21,12 @@ import LandingPage from '../page_objects/landingPage';
 // })
 
 describe("🧭 ∙ Initial Tests", () => {
+  beforeEach(() => {
+    // Restore local storage before each test
+    cy.restoreLocalStorage();
+    // Visit your base URL or the necessary page
+    cy.visit('https://magento.softwaretestingboard.com')
+  });
  
   it("Visit the Login Url", () => {
 
@@ -32,6 +38,7 @@ describe("🧭 ∙ Initial Tests", () => {
       }
   
       visitsUrl() // visits URL
+      cy.saveLocalStorage();
   })
 
   it('should type eamil and passwords in rquired fields and submit', () => {
