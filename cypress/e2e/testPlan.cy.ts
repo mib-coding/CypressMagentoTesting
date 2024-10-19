@@ -2,6 +2,7 @@ export let baseUrl = "https://magento.softwaretestingboard.com/customer/account/
 import LoginPage from '../page_objects/loginPage';
 import ProductPage from '../page_objects/productPage';
 import LandingPage from '../page_objects/landingPage';
+import CartPage from '../page_objects/cartPage';
 //import 
 
 // beforeEach(() => {
