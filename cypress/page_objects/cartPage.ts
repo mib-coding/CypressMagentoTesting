@@ -5,6 +5,8 @@ class CartPage {
         listing: () => cy.xpath(''),
         listingButton: () => cy.xpath(''),
         listingMenu: () => cy.xpath(''),
+        productMenu: () => cy.xpath(''),
+
         }
 }
   export default new CartPage();
