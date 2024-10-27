@@ -8,6 +8,8 @@ class CartPage {
         productMenu: () => cy.xpath(''),
         cartbucket: () => cy.xpath(''),
         addButton: () => cy.xpath(''),
+        addButton2: () => cy.xpath(''),
+
 
 
         }
