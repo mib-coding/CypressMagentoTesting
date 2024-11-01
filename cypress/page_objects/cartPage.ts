@@ -10,6 +10,8 @@ class CartPage {
         addButton: () => cy.xpath(''),
         addButton2: () => cy.xpath(''),
         checkoutButton: () => cy.xpath(''),
+        checkoutButton2: () => cy.xpath(''),
+
 
 
 
