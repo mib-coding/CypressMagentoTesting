@@ -12,13 +12,8 @@ class CartPage {
         checkoutButton: () => cy.xpath(''),
         checkoutButton2: () => cy.xpath(''),
         checkoutButton3: () => cy.xpath(''),
-
-
-
-
-
-
         }
+        
 }
   export default new CartPage();
   
